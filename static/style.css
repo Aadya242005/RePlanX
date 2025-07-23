@@ -1,0 +1,139 @@
+/* Reset & Base */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+
+  /* Visible blue gradient */
+  background: linear-gradient(to bottom right, #cceeff, #99ccff) !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+/* Container */
+.chat-wrapper {
+  max-width: 600px;
+  width: 95%;
+  height: 90vh; /* not 100% */
+  margin: 30px auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* Header */
+.chat-header {
+  background: #66b3ff;
+  color: rgb(226, 15, 15);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #589de3;
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.chat-header p {
+  margin: 5px 0 0;
+  font-size: 0.95em;
+}
+
+/* Chat Box */
+.chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgb(233, 133, 152);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Message Styles */
+.bot, .user {
+  max-width: 75%;
+  padding: 10px 15px;
+  border-radius: 18px;
+  font-size: 0.95em;
+  line-height: 1.4;
+  display: inline-block;
+  position: relative;
+}
+
+.user {
+  align-self: flex-end;
+  background: #0895f3;
+  color: #003366;
+  border-bottom-right-radius: 0;
+}
+
+.bot {
+  align-self: flex-start;
+  background: #e1edff;
+  color: #001f33;
+  border-bottom-left-radius: 0;
+}
+
+/* Input */
+.input-area {
+  display: flex;
+  padding: 12px;
+  background: #0399e3;
+  border-top: 2px solid #0961e4;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #99ccff;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1em;
+}
+
+.input-area button {
+  margin-left: 10px;
+  background: #3399ff;
+  border: none;
+  color: red;
+  font-size: 1.2em;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-area button:hover {
+  background: #007acc;
+}
+
+.quick-replies {
+  text-align: center;
+  background: #eef7ff;
+  padding: 10px;
+}
+
+.quick-replies button {
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.quick-replies button:hover {
+  background-color: #007acc;
+}

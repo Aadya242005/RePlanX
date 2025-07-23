@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="chat-wrapper">
+    <header class="chat-header">
+      <h1>🤖 Flexbot</h1>
+      <p>Your smart assistant</p>
+    </header>
+
+    <div id="chat-box" class="chat-box">
+      <!-- Messages will be injected here -->
+    </div>
+    <div class="quick-replies">
+  <button onclick="quickAsk('Where is my order?')">📦 Track Order</button>
+  <button onclick="quickAsk('How to return an item?')">🔄 Returns</button>
+  <button onclick="quickAsk('Do you support COD?')">💰 COD</button>
+</div>
+
+
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="Type your message..." onkeypress="handleKey(event)" />
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
